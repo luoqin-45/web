@@ -1,0 +1,62 @@
+<html>
+    <head>
+        <title>学生信息输入</title>
+        <style>
+            table{
+                margin: auto;
+                margin-top: 200px;
+                border: 6px solid cornflowerblue;
+                border-spacing: 0px;
+            }
+            td{
+                width: 80px;
+                height: 60px;
+                cursor: pointer; /*设置光标类型*/
+                background-color: #2371D3;
+                color:white;
+                border: white 1px solid;
+                text-align: center;
+                font-family:黑体;
+                font-weight: bold;
+            }
+        </style>
+        <script>
+            function Inp1(){
+                name=prompt('请输入你的名字');
+                display1.innerText=name;
+            }
+            function Inp2(){
+                number=prompt('请输入你的学号');
+                display2.innerText=number;
+            }
+            function Inp3(){
+                class1=prompt('请输入你的班级');
+                display3.innerText=class1;
+            }
+            function Inp4(){
+                age=prompt('请输入你的年龄');
+                display4.innerText=age;
+            }
+            
+        </script>
+        
+    </head>
+    <body>
+        <table>
+            <caption>学生个人信息展示</caption>
+            <tr>
+                <td>姓名</td>
+                <td>学号</td>
+                <td>班级</td>
+                <td>年龄</td>
+            </tr>
+            <tr>
+                <td onclick="Inp1()" id="display1"></td>
+                <td onclick="Inp2()" id="display2"></td>
+                <td onclick="Inp3()" id="display3"></td>
+                <td onclick="Inp4()" id="display4"></td>
+            </tr>
+        </table>
+    
+    </body>
+</html>

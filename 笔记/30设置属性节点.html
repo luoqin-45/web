@@ -1,0 +1,20 @@
+<html>
+    <head>
+        <script>
+            function getAtrr(){
+                var a1=document.getElementById("a");
+                alert(a1.getAttribute("href"));
+            }
+            function setAtrr(){
+                var a2=document.getElementById("a");
+                a2.setAttribute("href","https://weread.qq.com/web/reader/a9a3225071ddaaada9a7954");
+                //console.log(a2.href); //有问题              
+            }
+        </script>
+    </head>
+    <body>
+        <button onclick="getAtrr()">取得属性的值</button><br><br>
+        <button onclick="setAtrr()">修改属性的值</button><br><br>
+        <a href="https://www.baidu.com/" id="a">这是一个链接</a>
+    </body>
+</html>

@@ -1,0 +1,9 @@
+<script>
+    var num=prompt("请输入一个三位数的整数：");
+    var bai=parseInt(num/100);
+    var shi=parseInt(num%100/10);
+    var ge=parseInt(num%10);
+    var sum=bai*bai*bai+shi*shi*shi+ge*ge*ge;
+    document.write(sum==num? num+"是水仙花数":num+"不是水仙花数")
+
+</script>

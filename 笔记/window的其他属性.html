@@ -1,0 +1,18 @@
+<script>
+    // console.log(window.screen); //screen对象
+    // console.log(location);
+    // window.location="24.html";//location作为window对象属性时，可以设置页面跳转
+    function lacationAssign(){
+        location.assign("http://www.baidu.com");//加载新的文档，加载之后，可以后退
+    }
+    function lacationReplace(){
+        location.replace("http://www.baidu.com");//加载新的文档，替换当前的文档，替换之后不能后退
+    }
+    function lacationReload(){
+        location.reload(true);//重新加载当前网页
+    }
+
+</script>
+<button onclick="lacationAssign()">点我</button><br><br>
+<button onclick="lacationReplace()">点我</button><br><br>
+<button onclick="lacationReload()">点我</button>

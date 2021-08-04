@@ -1,0 +1,24 @@
+<script>
+    //打开一个新的窗口
+    function WindowOpen(){
+        window.open("https://www.baidu.com","百度一下","height:100px,width:100px,top:200px,left:300px");
+    }
+    //关闭当前窗口
+    function closeWindow(){
+        window.close();
+    }
+    //设置延时执行
+    var timeOutId=setTimeout(function(){console.log("jerch");},2000);
+    //使用延时器清除延时,清除延时，传入参数：调用setTimeout时返回一个id，通过变量接收id，传入clearTimeout。
+    setTimeout(function(){
+        clearTimeout(timeOutId);
+    }, 6000);//6s后清除延时
+    //设置定时器
+    var interValID=setInterval(function(){console.log('杰明教育');},1000);
+    //5s后清除定时器
+    setTimeout(function(){clearInterval(interValID);},5000)
+    
+</script>
+<!-- <button onclick="WindowOpen()">打开浏览器窗口</button> -->
+<!-- <button onclick="closeWindow()">打开浏览器窗口</button> -->
+

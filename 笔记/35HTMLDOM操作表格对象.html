@@ -1,0 +1,44 @@
+<style>
+    td{
+        width: 100px;
+        height: 80px;
+        border: darkseagreen solid 1px;
+        text-align: center;
+        color: turquoise;
+        font-weight: bold;
+    }
+    table{
+        border: #339463 solid 6px;
+        margin: auto;
+        border-spacing: 0px;
+    }
+</style>
+<body>
+    <table id="table" >
+        <tr>
+            <td>第一行第一列</td>
+            <td>第一行第二列</td>
+        </tr>
+        <tr>
+            <td>第二行第一列</td>
+            <td>第二行第二列</td>
+        </tr>
+        <tr>
+            <td>第三行第一列</td>
+            <td>第三行第二列</td>
+        </tr>
+        <tr>
+            <td>第四行第一列</td>
+            <td>第四行第二列</td>
+        </tr>
+    </table>
+</body>
+<script>
+    var table=document.getElementById("table");
+    console.log(table.rows);
+    var row=table.insertRow(4);
+    var cell1=row.insertCell(0);
+    var cell2=row.insertCell(1);
+    cell1.innerHTML="new";
+    cell2.innerHTML="new";
+</script>

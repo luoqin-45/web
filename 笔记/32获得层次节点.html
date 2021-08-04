@@ -1,0 +1,22 @@
+<div id="box">
+    第一个div标签
+    <p id="p" title="P标签">第一个p标签</p>
+    <ul>
+        <li>第一个li标签</li>
+        <li>第二个li标签</li>
+        <li>第三个li标签</li>      
+    </ul>
+    <p>
+        第二个p标签<br>
+        <span>第一个span</span>
+    </p>
+</div>
+<script>
+    var box=document.getElementById("box");
+    var childs=box.childNodes;
+    var child=box.children;
+    console.log(childs);
+    console.log(child);
+    console.log(child[0]);
+
+</script>

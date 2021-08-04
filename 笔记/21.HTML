@@ -1,0 +1,38 @@
+<html>
+    <head>
+        <style>
+            /* 选择具有title属性的p元素 */
+            #div1 p[title]{
+                color: blue;
+            }
+            /* 选择具有selected属性并且属性值等于selected的option元素 */
+            #div1 option[selected="selected"]{
+                color:blue;
+            }
+            /* 选择具有selected属性值且属性值为sel开头的字符串元素 */
+            #div1 option[selected^="sel"]{
+                background-color: pink;
+            }
+            /* 选择具有disabled属性且属性值为以led结尾的字符串的option元素 */
+            #div1 option[disabled$="ed"]{
+                background-color: greenyellow;
+            }
+            /* 选择具有disabled属性且属性值包含ed的字符串的option元素 */
+            #div1 option[disabled*="ed"]{
+                font-weight:bold;
+            }
+
+        </style>
+    </head>
+    <body>
+        <div id="div1">
+            <p title="前端学习">前端学习</p>
+            <select name="kuangjia" id="">
+                <option>框架</option>
+                <option selected="selected">Bootstrap</option>
+                <option disabled="disabled">JQuery</option>
+                <option>AngularJS</option>
+            </select>
+        </div>
+    </body>
+</html>

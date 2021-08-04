@@ -1,0 +1,136 @@
+<html>
+    <head>
+        <title>评论展示提交</title>
+        <style>
+            #outside{
+                width: 600px;
+                margin: 0px auto;
+                border: 6px solid rgba(128, 128, 155, 0.219);
+                padding-bottom: 15px;
+            } 
+            #outside h3{
+                width: 95%;
+                margin: 15px auto;
+                padding-bottom: 10px;
+                border-bottom: 1px solid rgba(128, 128, 155, 0.219);
+                font-family: "宋体"，san-serif;
+            }
+            #outside .comment1{
+                width: 95%;
+                margin: 10px auto;
+                color:rgba(45, 45, 70, 0.219);
+                border-bottom: 1px solid rgba(128, 128, 155, 0.219);
+                font-family: "宋体",sans-serif;
+            }
+            #comment1 span{
+                color: royalblue;
+                font-weight: bold;
+            }
+            .comment1 #time{
+                float: right;
+            }
+            .comment1 p{
+                font-weight: bold;
+                font-family: "宋体",sans-serif;
+                color: black;
+            }
+            #outside h4{
+                width: 95%;
+                margin: 15px auto;
+                color: royalblue;
+                font-family: "宋体",sans-serif;
+            }
+            #outside #addcomment{
+                width: 95%;
+                margin: 0 auto;
+                font-size: 12px;
+                color: #BBBBBB;
+            }
+            #addcomment #name{
+                
+                width: 200px;
+                border:1px solid #D9E2EF;
+            }
+            #outside #comContent{
+                width:250px;
+                height: 100px;
+                resize: none;
+                border: 1px solid #D9E2EF;
+                vertical-align: text-top;
+            }
+            #outside button{
+                width: 80px;
+                height: 30px;
+                background-color:royalblue;
+                color: #D9E2EF;
+                border: hidden;
+                float: right;
+                margin: 0;
+                padding: 0;    
+            }
+            #outside button:hover{
+                background-color: mediumslateblue;
+            }
+        </style>
+
+    </head>
+    <body>
+        <div id="outside">
+            <h3>最新评论</h3>
+            <div id="addComment">
+                <div id="comment1" class="comment1">
+                    网友:&nbsp;&nbsp;<span style="color:royalblue;font-weight: bold;">杰小瑞</span>
+                    <div id="time"> 2021/07/06 14:36</div>
+                    <p>学习使我快乐</p>
+                </div>
+            </div>
+            
+            <h4>发表评论</h4>
+            <div id="addcomment">
+                昵&nbsp;&nbsp;&nbsp;称：<input type="text" id="name"><br><br>
+                评论内容：<br><textarea id="comContent"></textarea><br>
+                <button onclick="addComment()">提交评论</button><br><br>
+                
+            </div>
+        </div>
+    </body>
+    <script>
+        var idNum=1;
+        function addComment(){
+            var date =new Date();
+            var y=date.getFullYear();
+            var m =date.getMonth()+1;
+            var d = date.getDate();
+            var h = date.getHours();
+            var minute = date.getMinutes();
+            
+            var inputValue =document.getElementById("name").value;
+            var inputText=document.getElementById("comContent").value;
+            if (inputText==""||inputValue==""){
+
+                alert("昵称和评论内容不能为空值！");return;
+            }
+            var comContent1=document.getElementById("comment1");
+            idNum++;
+            var newContent=comContent1.cloneNode(true);
+            newContent.setAttribute("id","comment"+idNum);
+
+            // var times=newContent.getElementById("time").value;
+            // times.innerHTML=y+"/"+m+"/"+d+"  "+h+":"+minute;
+        
+            var spans=newContent.getElementsByTagName("span");
+            spans[0].innerText=inputValue;
+
+            var ps=newContent.getElementsByTagName("p");
+            ps[0].innerText=inputText;
+
+            var addComment=document.getElementById("addComment");
+            addComment.appendChild(newContent);
+        
+            document.getElementById("name").value="";
+            document.getElementById("comContent").value="";
+        }
+        
+      
+    </script>
+</html>

@@ -1,0 +1,82 @@
+
+            *{
+                margin: 0;
+                padding: 0;
+            }
+            #header{
+                height: 20%;
+                
+               
+            }
+            #header .left{
+                background-color: purple;
+                height: 100%;
+                width: 20%;
+                float: left;
+             }
+            #header .center{
+                background-color: sandybrown;
+                margin: 0 0.5%;
+                height: 100%;
+                width: 50%;
+                float: left;
+            }
+            #header .right{
+                background-color: slateblue;
+                height: 100%;
+                width: 29%;
+                float: left;
+            } 
+            #nav{
+                height: 10%;
+                background-color: springgreen;
+                margin:1% 0;
+            }
+            #main{
+                height: 66%;
+            }
+            #context{
+                width: 75%;
+                height: 66%;
+                float: left;
+                margin-right:0.5%;
+               
+            }
+            #context .left1{
+                width: 40%;
+                height: 49%;
+                float: left;
+                margin-bottom: 1%;
+                margin-right: 1%;
+                background-color: tan;
+            }
+            #context .left2{
+                width: 40%;
+                height: 49%;
+                float: left;
+                clear: left;
+                background-color: tan;
+            }
+            #context .right1{
+                width: 59%;
+                height: 49%;
+                float: right;
+                margin-bottom: 1%;
+                background-color: tan;
+
+            }
+            #context .right2{
+                width: 59%;
+                height: 49%;
+                float: right;
+                
+                background-color: tan;
+
+            }
+            #aside{
+                width: 24.5%;
+                float: left;
+                height: 66%;
+
+                background-color: slateblue;
+            }

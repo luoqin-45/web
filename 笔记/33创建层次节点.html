@@ -1,0 +1,33 @@
+<ul id="ul" class="ul">
+    <li>第一项</li>
+    <li>第二项</li>
+    <li>第三项</li>
+    <li>第四项</li>
+</ul>
+<div style="width:100%;height:30px;background-color:darkseagreen;"id ="div1"></div>
+<button onclick="appendImg()">在文档最后插入一张图片</button>
+<button onclick="insertImg()">在ul与div之间插入一张图片</button>
+<button onclick="copyUl()">复制一个ul</button><br>
+
+<script>
+    function appendImg(){
+        var img=document.createElement("img"); //创建一个图片节点
+        img.setAttribute("src","plant.jpg"); //给img节点设置属性
+        document.body.appendChild(img);//追加到body的最后
+    }
+    function insertImg(){
+        var img=document.createElement("img");
+        img.setAttribute("src","plant.jpg");
+        var d=document.getElementById("div1");
+        document.body.insertBefore(img,d);//在ul和div之间插入
+    }
+    var count=1;
+    function copyUl(){
+        var ul=document.getElementById("ul");
+        var div1=document.getElementById("div1");
+        count++;
+        var ulClone=ul.cloneNode(true);
+        ulClone.setAttribute("id","ul"+count);
+        document.body.insertBefore(ulClone,div1);
+    }
+</script>

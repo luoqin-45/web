@@ -1,0 +1,49 @@
+<html>
+    <head>
+        <title>
+            元素在用户输入时触发
+        </title>
+        <style>
+            textarea{
+                width: 300px;
+                height: 100px;
+                resize: none;
+            }
+            #div{
+                /* width: 300px;
+                height: 200px; */
+                margin: 0 auto;
+            }
+        </style>
+    </head>
+    <body>
+        <div id="div">
+            <div >
+                请输入：<br>
+                <textarea id="textContent" oninput="checkText()"></textarea>
+            </div>
+            <div >
+                已输入<span id="done">0</span>个字，还可以输入<span id="will">140</span>个字
+            </div>
+        </div>
+        <script>
+            
+            function checkText(){
+                var textContent=document.getElementById("textContent");
+                var done=document.getElementById("done");
+                var will=document.getElementById("will");
+           
+                var max=140;
+                if (textContent.value.length>max){
+                    will.innerText=0;
+                    aler("不可以超过140个字");
+                }
+                else{
+                    done.innerText=textContent.value.length;
+                    will.innerText=max-textContent.value.length;
+                }
+              
+            }
+        </script>
+    </body>
+</html>

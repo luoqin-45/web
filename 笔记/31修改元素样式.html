@@ -1,0 +1,37 @@
+<html>
+    <head>
+        <style>
+            .div{
+                font-size:50px;
+            }
+            .div2{
+                font-size:16px;
+            }
+    
+        </style>
+        <script>
+            function cssByClassName(){
+                var div2=document.getElementById("div2");
+                div2.className="div2";              
+            }
+            function cssByStyle(){
+                var div2=document.getElementById("div2");
+                div2.style.fontSize="30px";
+            }
+            function cssByCssText(){
+                var div2=document.getElementById("div2");
+                div2.style.cssText="font-sie:50px";
+            }
+
+        </script>
+
+    </head>
+
+    <body>
+        <!-- 击“通过className修改字号”按钮会为div添加一个class="div2"，字号也会变小 -->
+        <button onclick="cssByClassName()">通过classname修改</button><br><br>
+        <button onclick="cssByStyle()">通过style修改字号</button><br><br>
+        <button onclick="cssByCssText()">通过style.cssText修改</button>
+        <div id="div2" class="div" name="div2">div文字</div>
+    </body>
+</html>

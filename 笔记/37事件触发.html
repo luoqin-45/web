@@ -1,0 +1,12 @@
+<button id="but">单击我触发事件</button>
+<script>    
+        var but=document.getElementById("but");
+        but.onclick=function(){ alert("触发事件");}  
+        document.onkeydown=function(e){
+                var evn=e||window.event;
+                var code=evn.keyCode||evn.charCode;
+                if(code==32){
+                        alert("您按下的键是enter。")
+                }
+        }   
+</script>
